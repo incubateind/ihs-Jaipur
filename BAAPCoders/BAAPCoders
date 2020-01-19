@@ -1,0 +1,26 @@
+app name Her Safety
+
+Features different interfaces for police station and users.
+
+Users app has live location tracking, direct updates to police station.
+Ability to share loction to trusted contacts.
+Simlple and easy UI with a Panic button.
+
+
+Police app shows list of users in the zone of the concerned police station.
+Ploice can see the live location of user.
+
+HERE technologies features used
+Routing API,
+Reverse Geo Coding,
+Custom Location using POI,
+
+
+List of Activities in User App:-
+1. Login Activity
+2. Nearest Police Station Activity
+3. Send Location to police
+
+List of Activities in Police App:-
+1. Check the list of users that need help
+2. Get the direction for their location Activity
