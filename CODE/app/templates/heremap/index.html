@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <title>Draggable Marker</title>
+  <base href="/">
+  <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jquery.datetimepicker.min.css">
+
+  
+
+
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-clustering.js"></script>
+  <!--Jquery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+
+
+<body id="markers-on-the-map" style="overflow-x: hidden;">
+
+  <div id="map"></div>
+  <div id="panel">
+    <input type="text" id="datetime-input" placeholder="Travel Date" autocomplete="off">
+    <input type="text" id="origin-input" placeholder="Origin" autofill="true" value="51.529412,-0.172691">
+    <input type="text" id="destination-input" placeholder="Destination" value="51.4945694,-0.0242433" autofill="true">
+    <button id="send" onclick="updatemap()">Send</button>
+
+
+  </div>
+
+
+  <script src="js/main.js"></script>
+
+  <!--date time picker files-->
+
+ 
+  <script src="js/jquery.datetimepicker.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var date = new Date();
+      var currentMonth = date.getMonth();
+      var currentYear = date.getFullYear();
+      var currentDate = date.getDate() + 2;
+      $('#datetime-input').datetimepicker({maxDate: new Date(currentYear, currentMonth, currentDate)});
+    });
+  </script>
+
+</body>
+
+</html>
