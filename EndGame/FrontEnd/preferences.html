@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="preferences.js"></script>
+<style>
+.button:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+
+.button{
+  
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+  <div style="text-align:center">
+  <form action="dashboard.html" style="color: blue;">
+    <h2 style="flex: auto; text-align: center;">Enter Your Preferred City:</h2><br>
+    <input type="text" name="city" value="Enter City" style="width: 250px; height: 20px;">
+    <br>
+    <br>
+    <input type="submit" value="Go!"style="width: 100px; height: 20px;">
+  </form> 
+</div>
+  <button class=" button" style="background-color:#1B3F8B;  margin-left: 200px; height:100px " onclick="freeze();">Police & Security</button>
+<button class=" button" style="background-color: #1B3F8B;  margin-left: 4px; height: 80px" onclick="freeze();">Crime Rate</button>
+<button class=" button" style="background-color:#4981CE;  margin-left: 110px;height: 100px"onclick="freeze();">Friendly Neighbourhood</button>
+<button class=" button" style="background-color:#1B3F8B;  margin-left: 20px;height: 80px"onclick="freeze();">Education</button>
+<button class=" button" style="background-color:#2C5197;  margin-left: 50px;  height:130px "onclick="freeze();">Movies & Shopping</button>
+  <button class=" button" style="background-color:#4981CE;  margin-left: 140px; height: 150px"onclick="freeze();">Health & Infrastructure</button>
+  <button class=" button" style="background-color:#2C5197 ; margin-left: 30px;height: 150px" onclick="freeze();">Public Parks & Libraries</button>
+  <button class=" button" style="background-color:#7EB6FF;  margin-left: 200px;height: 200px"onclick="freeze();">Eateries & Tourist Places</button>
+  <button class=" button" style="background-color:#2C5197; margin-left: 50px; height: 100px"onclick="freeze();">Taxes & Incentives</button>
+  <button class=" button" style="background-color:#1B3F8B; margin-left: 240px;height: 100px"onclick="freeze();">Pollution Levels</button>
+  <button class=" button" style="background-color:#2C5197;  margin-left: 120px;height: 150px "onclick="freeze();">Airport & Railway Connectivity</button>
+  <button class=" button" style="background-color: #7EB6FF;  margin-left: 340px;height: 80px"onclick="freeze();">Weather</button>
+<button class=" button" style="background-color:#2C5197; margin-left: 150px; height: 150px;"onclick="freeze();">Easy Daily Commute</button>
+<button class=" button" style="background-color: #4981CE; margin-left: 150px; height: 200px"onclick="freeze();">Public Transport Strength</button>
+<button class=" button" style="background-color:#1B3F8B;  margin-left: 5px; height:180px "onclick="freeze();">Cheap Housing & Renting</button>
+<button class="button" style="background-color: #7EB6FF; margin-left: 0px; height: 125px "onclick="freeze();">Traffic Congestion</button>
+</body>
+</html>

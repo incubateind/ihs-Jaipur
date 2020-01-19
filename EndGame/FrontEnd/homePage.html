@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Settl</title>
+	<meta charset="utf-8" />
+
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+	<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		body,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: "Lato", sans-serif
+		}
+
+		.w3-bar,
+		h1,
+		button {
+			font-family: "Montserrat", sans-serif
+		}
+
+		.fa-anchor,
+		.fa-coffee {
+			font-size: 200px
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+
+	<body>
+
+		<!-- Header -->
+		<header id="header" class="alt">
+			<div class="logo"><a href="homepage.html">Settl</a></div>
+			<a href="#menu">Menu</a>
+		</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="homepage.html">Home</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="signUp.html" target="_blank">SignUp</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="mailto:settl@gmail.com?Subject=Hello%20again">Suggestions</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section class="banner full"  >
+				<article>
+					<img src="images/slide01.jpg" alt="" />
+					<div class="inner">
+						<header>
+							<p>New Roads, New People, New Places, New Opportunities, New Perspective.</p>
+							<h2>It's Something New</h2>
+							<button class="social-signin facebook" target="_blank"  onclick="window.location.href = 'preferences.html'">Get Started</button>
+						</header>
+					</div>
+				</article>
+				<article>
+					<img src="images/slide02.jpg" alt="" />
+					<div class="inner">
+						<header>
+							<p>Live With No Excuses, Shift With No Regrets.</p>
+							<h2>Let's Go</h2>
+							<button class="social-signin facebook" target="_blank"  onclick="window.location.href = 'preferences.html'">Get Started</button>
+
+						</header> 
+					</div>
+				</article>
+				<article>
+					<img src="images/slide03.jpg"  alt="" />
+					<div class="inner">
+						<header>
+							<p>Not All Those Who Wander Are Lost.</p>
+							<h2>We'll Find You</h2>
+							<button class="social-signin facebook" target="_blank"  onclick="window.location.href = 'preferences.html'">Get Started</button>
+						</header>
+					</div>
+				</article>
+				<article>
+					<img src="images/slide04.jpg"  alt="" />
+					<div class="inner">
+						<header>
+							<p>Give Yourself The Best Gift.</p>
+							<h2>Adventures </h2>
+							<button class="social-signin facebook" target="_blank"  onclick="window.location.href = 'preferences.html'">Get Started</button>
+						</header>
+					</div>
+				</article>
+				<article>
+					<img src="images/slide05.jpg"  alt="" />
+					<div class="inner">
+						<header>
+							<p>Don't Listen To What They say.</p>
+							<h2>Go See</h2>
+							<button class="social-signin facebook" target="_blank"  onclick="window.location.href = 'preferences.html'">Get Started</button>
+						</header>
+					</div>
+				</article>
+			</section>
+
+<!-- One -->
+<section id="one" class="wrapper style2">
+	<div class="inner">
+		<div class="grid-style">
+
+			<div>
+				<div class="box">
+					<div class="image fit">
+						<img src="images/pic02.jpg" alt="" />
+					</div>
+					<div class="content">
+						<header class="align-center">
+							
+							<h2 style="color: bisque; ">Find Your Neighborhood</h2>
+						</header>
+						<p> Does it have pet-friendly rentals? What are the crime rates? How are the schools? Get important local information on the area you're most interested in.</p>
+						
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<div class="box">
+					<div class="image fit">
+						<img src="images/pic03.jpg" alt="" />
+					</div>
+					<div class="content">
+						<header class="align-center">
+							
+							<h2 style="color: bisque;">Find Your Job</h2>
+						</header>
+						<p > Filters down the number of job postings by salary, company, location, posting date and more. Potentially turn a results page with thousands of jobs into a few dozen.</p >
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- Second Grid -->
+<section id="banner">
+			<div class="wrapper style3 ">
+	<div class="inner">
+		
+		
+
+			<div>
+				<div >
+					
+					<div class="content">
+						<header class="align-center">
+							<span class="icon fa-bug" style="font-size:48px;"></span>
+
+				<p>Sort the list of best places to live by crime, cost of living, education or housing prices based on what’s most important to you.</p>
+				<h2>CUSTOMIZE THE LIST</h2>
+						</header>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+					   </div>
+
+		
+	</div>
+</section>
+
+
+
+		<!-- Second Grid -->
+		<section id="banner">
+			<div class="wrapper style3 ">
+				<div class="inner">
+					
+                     			
+						<div>
+							<div>
+
+								<div class="content">
+									<header class="align-center">
+										<span class="icon fa-car" style="font-size:48px;;"></span>
+
+							<p>Find the best place to Live. These top cities are selected by what matters most: lots of local amenities, low crime rates, inexpensive cost of living, great schools, low unemployment rates, affordable housing and sunny weather. </p>
+							<h2>THE LIVABILITY SCORE</h2>
+									</header>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+			</div>
+		</section>
+
+
+
+
+		<!-- Map Grid -->
+
+		<div class="w3-row-padding w3-padding-64 w3-container">
+			<div class="w3-content">
+				<div class="w3-twothird">
+					<div style="width: 640px; height: 480px" id="mapContainer"></div>
+					<script>
+						// Initialize the platform object:
+						var platform = new H.service.Platform({
+							'apikey': 'J5KRMOi97DHlFyKZUQa9L_9p8V3_V7zm9IEQgKpjj50'
+						});
+
+						let postPayload = {
+							"gsm": [{
+								"mcc": 262,
+								"mnc": 1,
+								"lac": 5126,
+								"cid": 21857
+							}]
+						};
+
+						var maptypes = platform.createDefaultLayers();
+						var map = new H.Map(
+							document.getElementById('mapContainer'),
+							maptypes.vector.normal.map,
+							{
+								zoom: 10,
+								center: { lng: 13.4, lat: 52.51 }
+							});
+						var mapEvents = new H.mapevents.MapEvents(map);
+
+						// Instantiate the default behavior, providing the mapEvents object:
+						new H.mapevents.Behavior(mapEvents);
+						var ui = H.ui.UI.createDefault(map, maptypes);
+
+						// let apiKey = 'J5KRMOi97DHlFyKZUQa9L_9p8V3_V7zm9IEQgKpjj50'
+						// let url = `https://pos.ls.hereapi.com/positioning/v1/locate?apiKey=${apiKey}`
+						// console.log(url)
+						// fetch(url, {
+						// 	method: 'POST',
+						// 	headers: {
+						// 		'Content-Type': 'application/json'
+						// 		// 'Content-Type': 'application/x-www-form-urlencoded',
+						// 	},
+						// 	body: JSON.stringify(postPayload)
+						// }).then(response => {
+						// 	response.json().then(response => {
+
+						// 		console.log(response);
+						// 	})
+						// })
+						map.setCenter({ lat: 27.031051, lng: 75.8933438 })
+					// Obtain the default map types from the platform object
+
+
+					// Instantiate (and display) a map object:
+
+					</script>
+				</div>
+			</div>
+		</div>
+
+		<!-- Two -->
+		<section id="two" class="wrapper style3">
+			<div class="inner">
+				<header class="align-center">
+					<p>Want to visit the best places in India </p>
+					<h2><a href="dashboard.html">Go Ahead </span></a></h2>
+				</header>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="container">
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<h3>By Kalpaj, Kishore, Garvita and Kashish</h3>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+
+		<script>
+			// Used to toggle the menu on small screens when clicking on the menu button
+			function myFunction() {
+				var x = document.getElementById("navDemo");
+				if (x.className.indexOf("w3-show") == -1) {
+					x.className += " w3-show";
+				} else {
+					x.className = x.className.replace(" w3-show", "");
+				}
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,35 @@
+{
+    "name": "herebackend",
+    "version": "1.0.0",
+    "description": "Backend code",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kalpaj12/HereBackend.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kalpaj12/HereBackend/issues"
+    },
+    "homepage": "https://github.com/kalpaj12/HereBackend#readme",
+    "dependencies": {
+        "axios": "^0.19.1",
+        "body-parser": "^1.19.0",
+        "config": "^3.2.5",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "express-promise-router": "^3.0.3",
+        "helmet": "^3.21.2",
+        "i18n-iso-countries": "^4.3.1",
+        "mongoose": "^5.8.9",
+        "morgan": "^1.9.1",
+        "request": "^2.88.0"
+    },
+    "engines": {
+        "node": "13.x"
+    }
+}
