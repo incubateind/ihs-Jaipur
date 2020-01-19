@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Street Vendor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <style>
+      .bg-gradient{
+        background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+      }
+      .nav-link{
+        font-size: 1.3em;
+      }
+    </style>
+  </head>
+  <body class="bg-gradient">
+<!--Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <img src="images/logo.png" alt="logo" width=180px height=60px>&emsp;
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="container" style="width: 100vw; height: 85vh" id="map"></div>
+    <br><br>
+    <h2 class="text-white text-center" id="about">ABOUT US</h2>
+    <br>
+     <div class="container">
+        <div class="card-deck">
+    
+    <div class="card bg-primary">
+      <div class="card-body text-center">
+        <h3 class="card-heading">We help Customers by</h3>
+
+        <p class="card-text">Connecting them to their nearby vendor</p>
+        <p class="card-text">Never lose their favorite one</p>
+       
+      </div>
+    </div>
+    <div class="card bg-warning">
+      <div class="card-body text-center">
+      	  <h3 class="card-heading">We help Vendors  by</h3>
+        <p class="card-text">Never lose their customers</p>
+      </div>
+    </div>
+    <div class="card bg-success">
+      <div class="card-body text-center">
+      	  <h3 class="card-heading">We help Administration by</h3>
+        <p class="card-text">Informing the vendors of restricted zones</p>
+         <p class="card-text">Reducing there headace of controlling vendors</p>
+        
+      </div>
+    </div>
+    <div class="card bg-danger">
+      <div class="card-body text-center">
+      	  <h3 class="card-heading">Brief Summary</h3>
+        <p class="card-text">We utilize Here Maps api to give customers,administration real-time location of Street Vendors in nearby areas</p>
+      </div>
+    </div>  
+  </div>
+</div>    
+      
+
+<!--Map API-->
+  <script type="text/javascript" charset="utf-8">
+    //Initialize the Platform object:
+    var platform = new H.service.Platform({
+        'apikey': 'Zmbt8GAOzIxsTUrvRxhw3ZroGEhHxMdP6qHFgGQi2sU'
+    });
+
+    // Get the default map types from the Platform object:
+    var defaultLayers = platform.createDefaultLayers();
+
+    // Instantiate the map:
+    var map = new H.Map(
+        document.getElementById('map'),
+        defaultLayers.vector.normal.map,
+        {
+            zoom: 12,
+            center: { lng: 75.778885, lat: 26.922070 }
+        });
+
+    var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+    var svgMarkup = '<svg width="24" height="24" ' +
+    'xmlns="http://www.w3.org/2000/svg">' +
+    '<circle stroke="white" fill="#ff0000" cx="10" cy="10" r="10" /></svg>';
+
+    var icon = new H.map.Icon(svgMarkup);
+    // Create the default UI:
+    var ui = H.ui.UI.createDefault(map, defaultLayers, 'en-US');
+    
+    window.onload = function () {
+    //addMarkersToMap(map);
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var currLoc = {
+          lng: position.coords.longitude,
+          lat: position.coords.latitude
+        }
+        map.setCenter(currLoc);
+      //var icon = new H.map.Icon('images/icons//red_marker.png');
+        var currMarker = new H.map.Marker(currLoc,{ icon : icon });//,{ icon : icon }
+        map.addObject(currMarker);
+      });
+    }
+    
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+  <script src="firebase_config.js"></script>
+  <script>
+    const db = app.firestore();
+    db.collection('vendors').get().then((snapshot) => {
+      snapshot.docs.forEach(doc => {
+        marker = new H.map.Marker({lng: doc.data().longitude,lat: doc.data().latitude});
+        map.addObject(marker);
+        addMarkerToGroup(group, {lat:doc.data().latitude, lng:doc.data().longitude},'<div>'+doc.data().name+'</div><div>'+doc.data().dishes+'</div>');
+      });
+    });
+
+    //InfoBubble
+    function addMarkerToGroup(group, coordinate, html) {
+      var marker = new H.map.Marker(coordinate);
+      // add custom data to the marker
+      marker.setData(html);
+      group.addObject(marker);
+    }
+    var group = new H.map.Group();
+    function addInfoBubble(map, data) {
+
+      map.addObject(group);
+
+      // add 'tap' event listener, that opens info bubble, to the group
+      group.addEventListener('tap', function (evt) {
+        // event target is the marker itself, group is a parent event target
+        // for all objects that it contains
+        var bubble =  new H.ui.InfoBubble(evt.target.getGeometry(), {
+        // read custom data
+          content: evt.target.getData()
+        });
+        // show info bubble
+        ui.addBubble(bubble);
+      }, false);
+    }
+    addInfoBubble(map);
+  </script>
+  </body>
+</html>
