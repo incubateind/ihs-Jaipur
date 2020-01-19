@@ -1,5 +1,5 @@
 # India Hackathon Series - HERE Jaipur
-Project Submission for HERE presents India Hackathon Series - Delhi.
+Project Submission for HERE presents India Hackathon Series - Jaipur.
 
 ## Submission Procedure
 Read the following steps and guidelines properly for proper submission of your project. Missing out any step or performing it wrongly can lead to unsuccessful submission. 
