@@ -1,1 +1,29 @@
+ROAMING GUIDE
+This is a web app which is focused on foreigner traveler or a person new to a certain place enabling him to know some important and interesting places around his current location.
 
+PROCEDURES
+First user will enter his current latitude and longitude and he will provide these values as hardcore values.
+
+He will also be able to locate it on a map according to provided inputs.
+
+After that user can click on some specific buttons like he can find hotels location around a particular range along its latitude and longitude. parks and outdoors, arts and entertainment
+
+He can also know Parks and outdoors, Arts and Entertainment around him like concerts, museums, etc.
+
+
+HOW?
+
+
+First, we have asked inputs from user as latitude and longitude.
+
+After that, we have used REST HERE API’s and located these points on the map with marker. 
+
+Then for the nearby places, we have used Arcgis REST API services for specific datasets.
+
+Using Arcgis REST API, we have requested responces with current latitudes and longitudes and we have obtained outputs in the form of JSON outputs in the console screen.
+
+
+STEPS-
+download and store final.html and second.css files under XAMPP>htdocs>new
+(new is a new folder under htdocs)
+open in google chrome->localhost/new/final.html
