@@ -34,11 +34,9 @@ function calculateRouteFromAtoB(platform) {
       representation: 'display',
       routeattributes: 'waypoints,summary,shape,legs',
       maneuverattributes: 'direction,action',
-      waypoint0: '27.0298,75.8935', // Brandenburg Gate
-      waypoint1: '26.9197,75.7880' // Friedrichstraße Railway Station
+      waypoint0: '27.0298,75.8935',
+      waypoint1: '26.9197,75.7880'
     };
-
-
   router.calculateRoute(
     routeRequestParams,
     onSuccess,
