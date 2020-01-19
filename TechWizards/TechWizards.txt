@@ -1,0 +1,20 @@
+Description : 
+
+Our aim is to develop an app and a hardware device which will identify potholes with real time location mounted on the gps based vehicles. 
+Our model basically comprises of machine learning algorithms which will help us to predict the condition of roads based on the dataset collected.
+We will also calculate the delays and traffic conditions too. Our model also categorize the type of jolts with the help of clustering algorithms.
+we also predict the forthcoming potholes with the help of weather conditions, load of traffic on certain routes.
+In addition to all these real time problems and inform the government about the condito of the withered roads.
+we use 3-axis accelerometer and is cost efficient. We can enhance the HERE maps by intergration of this system into it.
+By all this we prevent the road accidents and thus saving lives of many people.
+
+Contents :
+
+        Arudino : This folder contains all the program files of our arudino based hardware product.
+        App : This folder contains all the files of our android app.
+
+
+Hosting : 
+
+our project can be hosted on localhost by forming a xampp server and changing the IP address of the BASE URL in the RoadDetailActivity.java file in the app directory to 
+the IPv4 of the current system. 
