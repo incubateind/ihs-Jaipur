@@ -1,0 +1,15 @@
+{
+    "Backend": {
+        "js": {
+            "apiKey": "J5KRMOi97DHlFyKZUQa9L_9p8V3_V7zm9IEQgKpjj50",
+            "appID": "lpQxCqKFdbh8REQYukg8"
+        },
+        "rest": {
+            "apiKey": "FziwBQ0G5CEKqvDwIg8EVNBYVALo322iHJWOeJ4WQ90",
+            "appID": "uGkr8077mbekmo53NXPK"
+        },
+        "dbConfig": {
+            "port": 8080
+        }
+    }
+}
