@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Register</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+      <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+      <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+      <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+      <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+      <style>
+        .bg-gradient{
+          background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+        }
+        .form-control{
+          background-color: rgba(0,0,0,0);
+          border:0;
+          border-bottom: 2px solid black; 
+          color: rgb(5, 5, 5);
+          
+        }
+        .form-control:focus, .form-control:hover{
+          background-color: rgba(0,0,0,0);
+          border:0;
+          border-bottom: 1px solid rgb(34, 21, 21); 
+          color: rgb(15, 12, 12);
+        }
+        .input-group-text{
+          background-color: transparent;
+          color: rgb(32, 17, 17);
+          border: 0;
+          font-weight: bolder;
+          font-size:1.3em;
+        }
+        .nav-link{
+          font-size: 1.3em;
+        }
+        #success,#fail{
+          display: none;
+        }
+      </style>
+    </head>
+    <body class="bg-gradient">
+      <!--Nav Bar-->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <img src="images/logo.png" alt="logo" width=180px height=60px>&emsp;
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="alert alert-success" role="alert" id="success">
+        You are registered successfully.
+      </div>
+      <div class="alert alert-danger" role="alert" id="fail">
+        Some error occured. Try again
+      </div>
+      <h2 class="text-center">Fill This Form</h2><br>
+      <form name="registration" class="container">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Name</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Name" name="name">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Phone number</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Phone number" name="phone">
+        </div>
+        <div class="input-group mb-3" style="border: 1px dashed black;">
+          <div class="input-group-prepend">
+            <span class="input-group-text">ID Proof</span>
+          </div>
+          <input type="file" class="form-control" name="idproof" style="border:0;">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Type of food</span>
+          </div>
+          <select name="type" class="form-control">
+            <option value="Indian">Indian</option>
+            <option value="Chinese">Chinese</option>
+            <option value="South Indian">South Indian</option>
+            <option value="Italian">Italian</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Availability of food</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Food items available" name="dishes">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Address</span>
+          </div>
+          <div  class="form-control" style="width: 40vw; height: 40vh;" id="map"  style="border:0;"></div>
+        </div>
+        <div class="input-group-prepend">
+          <div class="col-lg-5"></div>
+          <button class="btn btn-success col-lg-2" type="button" onclick="register()">Register</button>
+          <div class="col-lg-5"></div>
+        </div>
+      </form>
+ <!--Map API-->
+
+ <script type="text/javascript" charset="utf-8">
+    //Initialize the Platform object:
+    var vendors = [["Vendor1","75.8092","26.9113"],["Vendor2","75.7346","26.8943"],["Vendor3","75.8305","26.8931"],["Vendor4","75.8251","26.9506"]];
+    var platform = new H.service.Platform({
+        'apikey': 'Zmbt8GAOzIxsTUrvRxhw3ZroGEhHxMdP6qHFgGQi2sU'
+    });
+
+    // Get the default map types from the Platform object:
+    var defaultLayers = platform.createDefaultLayers();
+
+    // Instantiate the map:
+    var map = new H.Map(
+      document.getElementById('map'),
+      defaultLayers.vector.normal.map,
+      {
+        zoom: 12,
+        center: { lng: 75.778885, lat: 26.922070 }
+      });
+
+    var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+    var svgMarkup = '<svg width="24" height="24" ' +
+    'xmlns="http://www.w3.org/2000/svg">' +
+    '<circle stroke="white" fill="#ff0000" cx="10" cy="10" r="10" /></svg>';
+
+    var icon = new H.map.Icon(svgMarkup);
+    // Create the default UI:
+    var ui = H.ui.UI.createDefault(map, defaultLayers, 'en-US');
+    var marker;
+    window.onload = function () {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var currLoc = {
+          lng: position.coords.longitude,
+          lat: position.coords.latitude
+        }
+        map.setCenter(currLoc);
+        //var icon = new H.map.Icon('images/icons//red_marker.png');
+        marker = new H.map.Marker(currLoc,{ icon : icon });//,{ icon : icon }
+        map.addObject(marker);
+      });
+    }
+
+    var addLoc
+    function setUpClickListener(map) {
+  // Attach an event listener to map display
+  // obtain the coordinates and display in an alert box.
+  map.addEventListener('tap', function (evt) {
+    var coord = map.screenToGeo(evt.currentPointer.viewportX,evt.currentPointer.viewportY);
+    addLoc = coord;
+    map.removeObject(marker);
+    marker = new H.map.Marker({lng: addLoc.lng, lat: addLoc.lat});
+    map.addObject(marker);
+  });
+}
+setUpClickListener(map);
+</script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+<script>
+  // Web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDup2ZrHsw2cN33dIl5uT-6BC7x16uE3kY",
+    authDomain: "streetvendor-6d116.firebaseapp.com",
+    databaseURL: "https://streetvendor-6d116.firebaseio.com",
+    projectId: "streetvendor-6d116",
+    storageBucket: "streetvendor-6d116.appspot.com",
+    messagingSenderId: "106658404229",
+    appId: "1:106658404229:web:90283f4f688ea4cddb96ec",
+    measurementId: "G-HV3WRZ7MFY"
+  };
+  
+
+    // Initialize Firebase
+    var app = firebase.initializeApp(firebaseConfig);
+    // Initialize Cloud Firestore through Firebase
+    const db = app.firestore();
+
+        function register()
+            {
+                var nameI = document.registration.name.value;
+                var numberI = document.registration.phone.value;
+                var typeI = document.registration.type.value;
+                var dishlist = document.registration.dishes.value;
+
+                //Adding to firestore
+                db.collection("vendors").add({
+                    name : nameI,
+                    phone : numberI,
+                    latitude: addLoc.lat,
+                    longitude: addLoc.lng,
+                    id: "ghjk",
+                    type: typeI,
+                    dishes: dishlist
+                })
+                .then(function(docRef) {
+                    document.getElementById("success").display = "block";
+                })
+                .catch(function(error) {
+                    document.getElementById("fail").display = "block";
+                });
+                document.registration.reset();
+            }
+        </script>
+    </body>
+</html>
