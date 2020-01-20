@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+<style>
+	.header {
+		padding: 5px;
+		text-align: center;
+		background-image: linear-gradient(to bottom right,skyblue,white);
+		font-family: Times New Roman;
+	}
+</style>
+</head>
+
+<body>
+   <div class = "header">
+         <strong>
+      <h1>Alpha CAA</h1>
+         </strong>
+   </div>
+
+   <br>
+   <img src="street1.png" title="Pole1"> 
+   <img src="street1.png" title="Pole2"> 
+   <img src="street1.png" title="Pole3"> 
+   <img src="street1.png" title="Pole4"> 
+   <img src="street1.png" title="Pole5"> 
+   <img src="street1.png" title="Pole6"> 
+   <img src="street1.png" title="Pole7"> 
+   
+   <br>
+   <br>
+   <script>
+         function myPopup(myURL, title, myWidth, myHeight) {
+            var left = (screen.width - myWidth) / 2;
+            var top = (screen.height - myHeight) / 4;
+            var myWindow = window.open(myURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + myWidth + ', height=' + myHeight + ', top=' + top + ', left=' + left);
+         }
+   </script>
+   <center>
+   <button onclick="window.location.href='problem.html'">Something wrong with light
+   </button>
+   </center>
+   <br>
+   <br>
+   <div style="width: 2000px; height: 600px" id="mapContainer"></div>
+      <script>
+      
+         var platform = new H.service.Platform({
+         'apikey':'gBh8bzA4t2xXoUcLwzMli6DedwfwNSbqsZXSZD9rYCE'
+         });
+
+         var maptypes = platform.createDefaultLayers();
+
+         var map = new H.Map(document.getElementById('mapContainer'),
+         maptypes.vector.normal.map,
+         {
+            zoom:4,
+            center: { lat: 20.5937, lng: 78.9629 }
+        });
+      </script>
+      
+      <script>
+   
+             var parisMarker = new H.map.Marker({lat:20.5937, lng: 78.9629});
+             map.addObjects([parisMarker]);
+         
+             var romeMarker = new H.map.Marker({lat:28.7041, lng: 77.1025});
+             map.addObject(romeMarker);
+         
+             var berlinMarker = new H.map.Marker({lat:27.0238, lng:74.2179});
+             map.addObject(berlinMarker);
+         
+             var madridMarker = new H.map.Marker({lat:25.0961, lng: 85.3131});
+             map.addObject(madridMarker);
+         
+             var londonMarker = new H.map.Marker({lat:11.941, lng:79.8083});
+             map.addObject(londonMarker);
+   
+         
+         var platform = new H.service.Platform({
+           apikey: 'gBh8bzA4t2xXoUcLwzMli6DedwfwNSbqsZXSZD9rYCE'
+         });
+         var defaultLayers = platform.createDefaultLayers();
+         
+         //window.addEventListener('resize', () => map.getViewPort().resize());
+         
+         var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(mapContainer));
+         
+         var ui = H.ui.UI.createDefault(mapContainer, defaultLayers);
+                        
+         </script>                         
+</body>
+</html>

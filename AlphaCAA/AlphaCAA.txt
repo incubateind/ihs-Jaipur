@@ -1,0 +1,36 @@
+Team Name ---- Alpha CAA
+Topic             ---- Autonomous Electricity Saving Mechanism
+
+Members      ----
+	1. Aaryan 
+	2. Chirag
+	3. Akhil
+
+What is the Problem ??
+---  * IMPROPER USAGE OF ELECTRICITY IN FOLLOWING MANNER
+     * IF STREET LIGHTS ARE ON IN DAYLIGHT
+     * IF STREET LIGHTS ARE OFF IN NIGHT
+     * LOW INTENSITY DURING FOG( IN WINTER )
+
+So, What's the solution to it...
+---  * CHANGE OF COLOR TO INCREASE THE INTENSITY
+     * SENSORS FITTED ON LIGHTS SENDS THE MESSAGE TO THE RESPECTIVE AUTHORITY IF,
+     * LIGHTS ARE ON DURING DAYTIME AND OFF AND NIGHT
+     * SENSORS FITTED ON STREET LIGHTS SENDS THE LOCATION OF THE LIGHTS ,IF ANY FAULT ARISES
+     * SOLAR PANELS ARE FITTED IN THE STREET LIGHTS ,TO REDUCE THE LOAD ON OTHER ENERGY RESOURCE
+     * IF EXTRA POWER IS PRODUCED BY THE PANELS WE CAN STORE IT AND CAN SELL IT TO EARN PROFITS
+
+Let's talk about Business Prospective!!
+---  * PROFIT EARNING BY SELLING THE EXTRA ELECTRICITY PRODUCED BY SOLAR PANELS
+     * LESS WASTAGE OF ELECTRICITY 
+     * REDUCED OPERATIONAL COST OF STREET LIGHTS BY USING SOLAR PANELS
+
+
+We have just taken some static locations with the help of HERE maps and used them to inform the fault or issue with
+the Street lamp to respective authority and also increase productivity of electricity with use of small cheap sensors.
+Sensors will also help in determining the intensity of lights and take action according to it.
+
+That's all.....
+Thankyou
+
+
