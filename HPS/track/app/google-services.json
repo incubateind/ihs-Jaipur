@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1089723640135",
+    "firebase_url": "https://track-176ed.firebaseio.com",
+    "project_id": "track-176ed",
+    "storage_bucket": "track-176ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089723640135:android:9b1cb472b293ed21860462",
+        "android_client_info": {
+          "package_name": "com.logicaldp.track"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089723640135-vh2vvbvtbioucbhbo68fkbr7e5ie9efn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.logicaldp.track",
+            "certificate_hash": "00872e9379ac02f31f48e6d511925e7e11d6c95d"
+          }
+        },
+        {
+          "client_id": "1089723640135-dbbml8doe53poi13104j98l8534vrmn1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg7h0bnNkMl8Wjl7R3KSh5pS3MyQgI38U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089723640135-dbbml8doe53poi13104j98l8534vrmn1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

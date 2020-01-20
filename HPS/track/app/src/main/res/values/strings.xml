@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">track</string>
+    <string name="tab_text_1">Drivers</string>
+    <string name="tab_text_2">Riders</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="sign_in">Sign In</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="agree">I agree to MyFastClaim\'s</string>
+    <string name="terms">Terms of use</string>
+    <string name="and">and</string>
+    <string name="policy">Privacy Policy</string>
+    <string name="donthaveaccount">Don’t have account?</string>
+    <string name="donthavepassword">Don\'t have a password</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
