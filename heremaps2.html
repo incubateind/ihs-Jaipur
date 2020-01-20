@@ -1,0 +1,208 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="../template.css" />
+    <script type="text/javascript" src='../test-credentials.js'></script>    
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src='../js-examples-rendering-helpers/iframe-height.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+      #main-box{
+        width:100%;
+        min-height:100vh;
+        background-color:#ccc;
+        position:absolute;
+        display:none;
+      }
+  </style>
+
+  </head>
+  <body>
+  
+
+
+
+    <div id="main-box"></div>
+<h1 align="center" style="padding:10px;font-size:40px;color:red;font-family:sans-serif;">police patrolling system</h1>
+<script>
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+<hr />
+<h3 align="center" style="padding:10px;font-size:30px;color:blue;font-family:sans-serif;">click on the icon below then click on inspect(ctrl+shift+I)to view the map </h3>
+<i class="fa fa-map-marker" style="color:red;text-align:center;font-size:90px;margin-left:50%;margin-top:15px;cursor:pointer;z-index:50;" id="icon"></i>
+<ul style="font-size:40px;color:rgb(121,24,354);padding-left:50px;">
+	
+    <li>Know police vehicle current location</li>
+    <li>know their location from nearest police station</li>
+    <li>See the location by the advanced technology</li>
+    <li>Map that makes India  next superpower</li>
+
+</ul>
+    <div style="width: 80%; height: 680px;box-shadow:0px 0px 8px black;border-radius:15px;display:none;position:absolute;top:140px;left:10%;right:10%;background-color:white;z-index:100;" id="mapContainer"></div>
+    
+    <script>
+
+        document.getElementById("icon").onclick=function(){
+            $("#mapContainer").slideDown(800);
+            $("#main-box").css("display","block");
+            $("#main-box").click(function(){
+                $("#mapContainer").slideUp(800,function(){
+                    $("#main-box").css("display","none");
+                });
+            });
+            
+        }
+
+      // Initialize the platform object:
+      var platform = new H.service.Platform({
+        'apikey': '6huV8EhuXvWigDtekB'
+      });
+
+      // Obtain the default map types from the platform object
+      var defaultLayers = platform.createDefaultLayers();
+
+      // Instantiate (and display) a map object:
+      var map = new H.Map(
+        document.getElementById('mapContainer'),
+        defaultLayers.vector.normal.map,
+        {
+          zoom: 10,
+          center: { lng: 75.89, lat: 27.03
+           }
+        });
+
+        window.addEventListener('resize', ()=> map.getViewPort().resize());
+      var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+      var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+ /**
+ * Adds markers to the map highlighting Berlin.
+ *
+ * https://developer.here.com/api-explorer/maps-js/markers/markers-on-the-map
+ *
+ * @param  {H.Map} map A HERE Map instance within the application
+ */
+ var cord = [{lat:27.03,
+     lng:75.77},{lat:27.0322,
+     lng:75.8925},{   lat:27.0224,
+     lng:75.8849},{
+     lat:26.9826,
+     lng:75.7809
+      },{
+     lat:26.9795,
+     lng:75.9262
+      },{
+     lat:26.9428,
+     lng:75.9331
+      },{
+     lat:26.9621,
+     lng:75.8013
+      },{
+     lat:26.9853,
+     lng:75.7721
+      },{
+     lat:26.9685,
+     lng:75.7754
+      },{
+     lat:26.9495,
+     lng:75.754
+      },{
+     lat:26.9495,
+     lng:75.754
+      }]
+for (var i = 0; i < 11; i++) {
+	var Marker = new H.map.Marker({
+     lat:cord[i].lat,
+     lng:cord[i].lng,
+      });
+    map.addObject(Marker);
+
+
+
+      map.addObject(new H.map.Circle(
+    // The central point of the circle
+    {lat:cord[i].lat, lng:cord[i].lng},
+    // The radius of the circle in meters
+    1000,
+    {
+      style: {
+        strokeColor: 'rgba(0, 204, 204, 0.2)', // Color of the perimeter
+        lineWidth: 2,
+        fillColor: 'rgba(0, 204, 204, 0.2)'  // Color of the circle
+      }
+    }
+  ));
+
+}
+
+
+                  </script>
+   <p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+  
+}
+
+
+
+/**
+ * Adds a circle over New Delhi with a radius of 1000 metres onto the map
+ *
+ * @param  {H.Map} map      A HERE Map instance within the application
+ */
+
+  map.addObject(new H.map.Circle(
+    // The central point of the circle
+    {lat:27.03, lng:75.77},
+    // The radius of the circle in meters
+    1000,
+    {
+      style: {
+        strokeColor: 'rgba(0, 204, 204, 0.2)', // Color of the perimeter
+        lineWidth: 2,
+        fillColor: 'rgba(0, 204, 204, 0.2)'  // Color of the circle
+      }
+    }
+  ));
+
+
+
+</script>
+
+
+  </body>
+</html>
