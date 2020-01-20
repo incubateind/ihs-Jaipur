@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Get Your Buses</title>
+<style>
+.main{
+	position:relative;
+}
+.name{
+	position:absolute;
+	top:10%;
+	left:60%;
+}
+.name h1{
+	font-size:350%;
+	letter-spacing:10px;
+	color:white;
+}
+.logo{
+	position:absolute;
+	top:0%;
+	left:0%;
+}
+
+.login{
+	background:white;
+	height:200px;
+	width:300px;
+	opacity:0.8; 
+	position:absolute;
+	top:40%;
+	left:60%;
+	padding:3%;
+	padding-left:50px;
+	font-size:150%;
+}
+.login input[text]{
+	padding:10%;
+}
+.g{ 
+	color:black;
+	background-color:white;
+	top:45%;
+	left:10%;
+	opacity:0.8;
+	position:absolute;
+	height:300px;
+	width:400px;  
+}
+</style>
+</head>
+<body style="padding:0px; margin:0;">
+<div class="main">
+<img src="BUS2.jpg" style="height:800px;width:1517px"; >
+<div class="name"><h1>GET YOUR BUSES</h1></div>
+</div>
+<div class="logo">
+	<img src="bus3.jpg" style="height:150px;width:150px;">
+</div>
+<div class="login">
+  <form action="k.html">
+    <label for="Sanskriti">Username</label>
+    <input type="text" name="usrname" required><br><br>
+    <label for="sanchi">Password</label>
+    <input type="password" name="psw" pattern="*" required><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<div class="g">
+<p><h1>Advantage</h1></p>
+<ul>
+<li><p><h3>Scheduled Monitoring</h3></p></li>
+<li><p><h3>Keep Customer Happy</h3></p></li>
+<li><p><h3>Fast Vehicle Recovery</h3></p></li>
+<li><p><h3>Reduce Paperwork</h3></p></li>
+</ul>
+</div>
+<script></script>
+</body>
+</html>
