@@ -1,0 +1,54 @@
+PROJECT SUBMISSION
+BY 
+TROJAN HORSE
+ON 
+ALUMNI MAPPING SYSTEM
+(DOCUMENTATION)
+
+
+
+
+
+
+                                      TEAM MEMBERS-
+* MEHTAB MULTANI
+* NIKHIL SUTHAR
+* NIKHIL BANSAL
+* MUSKAN AGRAWAL
+DESCRIPTION OF THE PROJECT
+
+In the present scenario, there is no web where we can-
+* Track the alumni globally
+* Recruitment based on location and other factors of alumni directly
+* No transparency in the placement ratio from each college to the public
+* All the above data with authentication and security
+
+So what our project is that the earlier scenario of tracking the alumni one by one where the load was in the heads of the college, it will be the individual who will update their data with college.
+All the data from each alumni of every college will be saved and based on that data we can produce many test cases which will be benefit for any of them-
+o Recruiters- they can recruit with best searches and filters like location, skill set, etc.
+o College- the details of placement ratio will act like advertising them, attracting new students for admission with a smooth and hustle free tracking of alumni.
+o Alumni- they will always have an opportunity to have placed in some good companies while being connected in the map.
+o Students – idea where the seniors are.
+
+
+The contents of the project directory
+
+The lists of code files-
+> Node.js packages
+> Node_modules
+> Stylesheet files (css)
+> EJS files 
+> HTML files
+> JavaScript file
+> HERE API (Geo-Fencing, Geo-Visualization, Live Track, etc.) 
+
+
+
+Ways to host the project on localhost
+
+1. Firstly, you have to open the code in your editor like VisualStudio Code, Atom.
+2. Open your console like git bash.
+3. Enter command to run the code like “node app.js”, “nodemon app.js.” 
+4. Open the browser like chrome, safari, etc.
+5. Search “localhost:3000”
+6. The web app will be open.

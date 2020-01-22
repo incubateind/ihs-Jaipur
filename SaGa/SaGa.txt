@@ -1,0 +1,14 @@
+Autonomus Accident Managment System
+
+We have developed a simple WebApp that givest the Fastest route to Ambulance.
+Also it sends the vital information of the patient to the hospital.
+
+Project Directory Contains:
+
+- SaGa.pptx : This is our Presentation of the Project.
+- index.html : This is the Main WebPage.
+- several supporting files.
+
+To run this on the local host we can install apache server and put all the 
+files in the designated location of apache to run on localhost.
+it could also be seen at https://gauranshkumar.github.io/AAMS/

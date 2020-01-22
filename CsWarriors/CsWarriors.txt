@@ -1,0 +1,16 @@
+------------Street Vendor-------------
+	Description
+We focus on solving the problems faced daily by street vendors .
+Our web app will be able to reduce the vendor's risk of losing customers.
+    Contents
+index.html  (main page /front page)
+register.html (for registering vendors)
+firebase_config.js (firebase configuration file)
+images (images used )
+	Hosting
+You need to have Xampp server installed.
+Place the project folder in the 'htdocs' folder.
+Start the Xampp control panel.
+Run the Apache Server.
+Open 'localhost/streetvendor/index.html' in your web browser.
+

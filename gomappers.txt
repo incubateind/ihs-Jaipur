@@ -1,0 +1,33 @@
+﻿Description of our Project:
+
+
+Project Name : Trips
+About Trips: 
+It’s a webapp built in Django, HTML, CSS, JS and Bootstrap that helps travelers gain a rustic and natural experience of nature. The destinations we provide are basically rural destinations which have people that can contribute to develop and gain profits through our platform that hides all the complex process and makes it easy and smooth for both the traveler(USER) and the rural people(SERVICE PROVIDERS). We will be using HERE Maps api and microservices architecture to help our travelers choose their rural destinations that would be feasible for them and also help our users to route, reroute, reschedule their path from origin to destination based on cost estimation and traffic.
+
+
+Contents of Trips:
+The project contains mainly all the static files and templates and CRC model pdf. They are located at:
+Static: Trips/store/static/store
+Templates: Trips/store/template/store
+CRC MODEL : https://drive.google.com/file/d/1cRSfUSJHHeAn5A7L4n2pL2c8xSoevZQ9/view?usp=sharing
+
+
+How to host Trips at localhost:
+
+
+Steps:
+Assuming you have pip and python 3.8 installed on your system, if not follow the link:
+python : https://www.python.org/
+Type command for pip:
+python get-pip.py
+
+
+1. Pip install django
+2. Pip install djangorestframework
+3. Now download our project folder
+4. Run command prompt as admin
+5. Move to the folder where manage.py file is present in command prompt.
+6. Run command: python manage.py runserver
+7. Click on or go to:  http://127.0.0.1:8000/
+8. App should start running.

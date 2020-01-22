@@ -1,0 +1,43 @@
+India Innovation Hackathon 
+Team Number - 13
+Team Name - endgame
+
+#############################################################
+			Documentation
+#############################################################
+
+Modules 1. Settl FrontEnd
+	2. Settl BackEnd
+	3. Settl's MLTrainingNetwork
+
+----------------------------------------------------------
+Module 1 : Settl FrontEnd
+
+*Instructions*
+1. Run the Home Page homePage.html
+2. Preferred browsers are Google Chrome and Firefox
+
+----------------------------------------------------------
+Module 2 : Settl Backend
+
+*Instructions*
+1. Settl uses many REST APIs provided by here maps. 
+2. The backend is written is node, and uses express framework. 
+3. MongoDB is our choice of database, which helps store information related to user such as his/her preferences, contact information, etc.
+4. The backend exposes REST API's that provide location as coordinates to frontend, for easier access. Backend also sorts restaurants,  
+   tourist-attractions, eat-drink places, based on requested conditions.
+5. Backend also plays an important role in exposing other critical REST APIs, used in calculation of the Liveability Index of a city.
+
+*Installation & Setup*
+1. Install Node.js
+2. In the backend folder, run npm init
+3) To start the backend server, use nodemon index.js
+
+-----------------------------------------------------------
+Module 3 : Settl's MLTrainingNetwork
+
+*Instructions*
+1. Install Python3 or open Google CoLab from here http://colab.research.google.com/
+2. Download and Run the python notebook "Liveability-Settl.ipynb"
+
+-----------------------------------------------------------

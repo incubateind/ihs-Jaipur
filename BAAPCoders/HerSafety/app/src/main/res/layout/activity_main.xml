@@ -1,0 +1,103 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Name:"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:text="Name of Police Station"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+
+            <LinearLayout
+                android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Address:"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:text="Address of Police Station"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+            <Button
+                android:id="@+id/request_location"
+                android:textColor="#fff"
+                android:layout_marginTop="10dp"
+                android:text="Send Location Updates"
+                android:background="@drawable/btn_rounded_red"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <fragment
+        class="com.here.android.mpa.mapping.AndroidXMapFragment"
+        android:id="@+id/mapfragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--<androidx.appcompat.widget.AppCompatButton
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="#fff"
+        android:id="@+id/locationOfPolice"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:text="Nearest Police Station"
+        android:background="@drawable/btn_rounded_red"
+        android:layout_height="wrap_content"/>
+-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="#fff"
+        android:id="@+id/listPoliceStations"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="Nearest Police Station"
+        android:background="@drawable/btn_rounded_red"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
