@@ -17,7 +17,7 @@
     },
     "homepage": "https://github.com/kalpaj12/HereBackend#readme",
     "dependencies": {
-        "axios": "^0.19.1",
+        "axios": "^0.21.1",
         "body-parser": "^1.19.0",
         "config": "^3.2.5",
         "cors": "^2.8.5",
